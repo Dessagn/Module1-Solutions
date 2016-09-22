@@ -30,8 +30,7 @@
 			} else {
 				//Split the lunch list into an array with splice at ','
 				var lunchList = $scope.lunch.split(',');
-				//Remove all the empty elements
-				removeEmptyLists(lunchList);
+				
 				//Get the length of the lunch array
 				var lunchListLength = lunchList.length;
 				//If lunch is lessthan or equal to 3, 'ENJOY!'
@@ -46,17 +45,6 @@
 					$scope.lunch = '';
 				}
 
-				/*
-				Implement the removal of the empty elements in the lunch array if any.
-				 */
-				function removeEmptyLists(lunchList) {
-					for (var i = 0; i < lunchList.length; i++) {
-						if (!lunchList[i]) {
-							lunchList.splice(i, 1);
-						}
-					}
-
-				}
 			}
 		};
 	}
